@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="description" content="Inter-City and High-Volume Parcel Routes online course by MK Global SA. Professional training for South African courier drivers handling long-distance and high-volume work.">
+<meta name="theme-color" content="#1B3A5C">
+<title>Inter-City and High-Volume Parcel Routes | MK Global SA</title>
+
+<style>
+:root {
+  --mk-navy: #1B3A5C;
+  --mk-blue: #2E75B6;
+  --mk-gold: #C5972C;
+  --mk-amber: #F4B740;
+  --mk-amber-bg: #FFF8E7;
+  --mk-grey-50: #F7F8FA;
+  --mk-grey-100: #ECEEF2;
+  --mk-grey-200: #D8DCE3;
+  --mk-grey-400: #8B94A3;
+  --mk-grey-700: #3A4251;
+  --mk-text: #1A2330;
+  --mk-white: #FFFFFF;
+  --mk-success: #2E8B57;
+  --mk-success-bg: #E6F4EC;
+  --mk-error: #B22222;
+  --mk-error-bg: #FBEAE8;
+  --mk-red: #B22222;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(26,35,48,0.06);
+  --shadow-md: 0 4px 12px rgba(26,35,48,0.08);
+  --shadow-lg: 0 8px 24px rgba(26,35,48,0.12);
+  --font-body: Arial, Helvetica, sans-serif;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;padding:0;font-family:var(--font-body);font-size:16px;line-height:1.6;color:var(--mk-text);background:var(--mk-grey-50);min-height:100vh;-webkit-font-smoothing:antialiased}
+.site-header{background:#000;color:var(--mk-white);padding:var(--space-3) var(--space-5);box-shadow:var(--shadow-md);position:sticky;top:0;z-index:50;border-bottom:2px solid var(--mk-gold)}
+.site-header__inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.brand{display:flex;align-items:center;gap:var(--space-3);text-decoration:none;color:var(--mk-white)}
+.brand__logo{height:72px;width:auto;display:block;flex-shrink:0}
+@media(max-width:480px){.brand__logo{height:56px}}
+.brand__text{font-weight:bold;font-size:15px;line-height:1.3}
+.header-progress{font-size:13px;opacity:0.9;white-space:nowrap}
+.container{max-width:720px;margin:0 auto;padding:var(--space-5) var(--space-4)}
+.container--wide{max-width:960px}
+.view{display:none}
+.view.is-active{display:block;animation:fadeIn 0.3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--mk-white);border-radius:var(--radius-lg);padding:var(--space-6);box-shadow:var(--shadow-md);border:1px solid var(--mk-grey-100)}
+.card+.card{margin-top:var(--space-5)}
+h1,h2,h3,h4{color:var(--mk-navy);line-height:1.25;margin:0 0 var(--space-4) 0}
+h1{font-size:26px;font-weight:bold}
+h2{font-size:21px;font-weight:bold;margin-top:var(--space-6)}
+h3{font-size:18px;font-weight:bold;margin-top:var(--space-5)}
+h4{font-size:16px;font-weight:bold}
+@media(min-width:640px){h1{font-size:32px}h2{font-size:24px}}
+p{margin:0 0 var(--space-4) 0}
+.lead{font-size:17px;color:var(--mk-grey-700)}
+.eyebrow{display:inline-block;font-size:12px;font-weight:bold;text-transform:uppercase;letter-spacing:1px;color:var(--mk-gold);margin-bottom:var(--space-3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-height:48px;padding:12px 24px;border-radius:var(--radius-md);font-family:inherit;font-size:16px;font-weight:bold;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:all 0.15s ease;line-height:1.2;text-align:center}
+.btn:focus-visible{outline:3px solid var(--mk-amber);outline-offset:2px}
+.btn--primary{background:var(--mk-navy);color:var(--mk-white);border-color:var(--mk-navy)}
+.btn--primary:hover{background:#142c47;border-color:#142c47}
+.btn--primary:active{transform:translateY(1px)}
+.btn--gold{background:var(--mk-gold);color:var(--mk-navy);border-color:var(--mk-gold)}
+.btn--gold:hover{background:#b0861f;border-color:#b0861f}
+.btn--secondary{background:var(--mk-white);color:var(--mk-navy);border-color:var(--mk-navy)}
+.btn--secondary:hover{background:var(--mk-grey-50)}
+.btn--full{width:100%}
+.btn:disabled{opacity:0.45;cursor:not-allowed;transform:none}
+.field{margin-bottom:var(--space-5)}
+.field label{display:block;font-weight:bold;margin-bottom:var(--space-2);color:var(--mk-grey-700);font-size:15px}
+.field input,.field select,.field textarea{width:100%;min-height:48px;padding:12px 14px;border:2px solid var(--mk-grey-200);border-radius:var(--radius-md);font-family:inherit;font-size:16px;color:var(--mk-text);background:var(--mk-white);transition:border-color 0.15s ease}
+.field textarea{min-height:80px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--mk-blue);box-shadow:0 0 0 3px rgba(46,117,182,0.15)}
+.field__hint{font-size:13px;color:var(--mk-grey-400);margin-top:var(--space-2)}
+.field--error input,.field--error select{border-color:var(--mk-error);background:var(--mk-error-bg)}
+.field__error{display:none;font-size:13px;color:var(--mk-error);margin-top:var(--space-2);font-weight:bold}
+.field--error .field__error{display:block}
+.field__status{display:none;font-size:13px;color:var(--mk-grey-700);margin-top:var(--space-2)}
+.field__status.is-visible{display:block}
+.outcomes{list-style:none;padding:0;margin:0 0 var(--space-5) 0}
+.outcomes li{padding:var(--space-3) 0 var(--space-3) 36px;position:relative;border-bottom:1px solid var(--mk-grey-100);font-size:15px}
+.outcomes li:last-child{border-bottom:none}
+.outcomes li::before{content:"";position:absolute;left:0;top:16px;width:22px;height:22px;background:var(--mk-gold);border-radius:50%;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><polyline points='5 10 9 14 15 6' stroke='%231B3A5C' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-size:22px;background-repeat:no-repeat}
+.meta-row{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-5)}
+.meta-pill{background:var(--mk-grey-100);color:var(--mk-grey-700);padding:6px 14px;border-radius:100px;font-size:13px;font-weight:bold}
+.lesson-list{list-style:none;padding:0;margin:0}
+.lesson-list__item{background:var(--mk-white);border:1px solid var(--mk-grey-100);border-radius:var(--radius-md);padding:var(--space-4);margin-bottom:var(--space-3);display:flex;align-items:center;gap:var(--space-4);box-shadow:var(--shadow-sm);transition:box-shadow 0.15s ease}
+.lesson-list__item--clickable{cursor:pointer}
+.lesson-list__item--clickable:hover{box-shadow:var(--shadow-md);border-color:var(--mk-blue)}
+.lesson-list__item--locked{opacity:0.55}
+.lesson-list__item--done{background:var(--mk-success-bg);border-color:var(--mk-success)}
+.lesson-num{width:40px;height:40px;border-radius:50%;background:var(--mk-navy);color:var(--mk-white);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16px;flex-shrink:0}
+.lesson-list__item--done .lesson-num{background:var(--mk-success)}
+.lesson-list__item--locked .lesson-num{background:var(--mk-grey-400)}
+.lesson-info{flex:1;min-width:0}
+.lesson-info__title{font-weight:bold;color:var(--mk-navy);margin-bottom:2px;font-size:15px;line-height:1.3}
+.lesson-info__meta{font-size:13px;color:var(--mk-grey-400)}
+.lesson-status{font-size:13px;font-weight:bold;color:var(--mk-grey-400);flex-shrink:0;display:flex;align-items:center;gap:6px}
+.lesson-list__item--done .lesson-status{color:var(--mk-success)}
+.lesson-list__item--current{border-left:4px solid var(--mk-blue)}
+.lesson-list__item--current .lesson-status{color:var(--mk-blue)}
+.lock-icon{display:inline-block;width:14px;height:14px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='%238B94A3' d='M10 2a4 4 0 0 0-4 4v2H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-1V6a4 4 0 0 0-4-4zm-2 6V6a2 2 0 1 1 4 0v2H8z'/></svg>");background-size:contain;background-repeat:no-repeat}
+.assessment-card{background:var(--mk-white);border:2px solid var(--mk-grey-200);border-radius:var(--radius-md);padding:var(--space-5);margin-top:var(--space-5);display:flex;align-items:center;gap:var(--space-4);box-shadow:var(--shadow-sm);transition:all 0.15s ease}
+.assessment-card--locked{opacity:0.7}
+.assessment-card--unlocked{border-color:var(--mk-gold);background:#FAF0D8;cursor:pointer}
+.assessment-card--unlocked:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.assessment-card__badge{width:48px;height:48px;border-radius:50%;background:var(--mk-grey-400);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--mk-white);font-weight:bold;font-size:18px}
+.assessment-card--unlocked .assessment-card__badge{background:var(--mk-gold);color:var(--mk-navy)}
+.assessment-card__body{flex:1;min-width:0}
+.assessment-card__title{font-weight:bold;color:var(--mk-navy);font-size:16px;margin-bottom:2px}
+.assessment-card__meta{font-size:13px;color:var(--mk-grey-700)}
+.assessment-card__action{font-size:13px;font-weight:bold;color:var(--mk-grey-400);flex-shrink:0}
+.assessment-card--unlocked .assessment-card__action{color:var(--mk-navy)}
+.progress{margin:var(--space-4) 0 var(--space-5) 0}
+.progress__label{display:flex;justify-content:space-between;font-size:13px;font-weight:bold;color:var(--mk-grey-700);margin-bottom:6px}
+.progress__bar{width:100%;height:10px;background:var(--mk-grey-100);border-radius:100px;overflow:hidden}
+.progress__fill{height:100%;background:var(--mk-gold);border-radius:100px;width:0%;transition:width 0.3s ease}
+.progress__fill--complete{background:var(--mk-success)}
+.callout{border-left:4px solid var(--mk-blue);background:#EDF4FB;padding:var(--space-4);border-radius:var(--radius-sm);margin:var(--space-5) 0;font-size:15px}
+.callout--warning{border-left-color:var(--mk-amber);background:var(--mk-amber-bg)}
+.callout--gold{border-left-color:var(--mk-gold);background:#FAF0D8}
+.callout--success{border-left-color:var(--mk-success);background:var(--mk-success-bg)}
+.callout--do{border-left-color:var(--mk-success);background:var(--mk-success-bg)}
+.callout--dont{border-left-color:var(--mk-red);background:var(--mk-error-bg)}
+.bullet-list{margin:0 0 var(--space-4) 0;padding-left:20px}
+.bullet-list li{margin-bottom:6px}
+.checklist{list-style:none;padding:0;margin:0 0 var(--space-4) 0}
+.checklist li{padding:var(--space-2) 0;display:flex;align-items:flex-start;gap:var(--space-3)}
+.checklist input[type="checkbox"]{width:22px;height:22px;accent-color:var(--mk-success);flex-shrink:0;margin-top:2px;cursor:pointer}
+.diagram-wrap{margin:var(--space-5) 0;border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--mk-grey-200)}
+.diagram-wrap img{width:100%;height:auto;display:block}
+.diagram-wrap__caption{background:var(--mk-navy);color:var(--mk-white);padding:var(--space-3) var(--space-4);font-size:13px;font-weight:bold;text-align:center}
+.site-footer{text-align:center;padding:var(--space-6) var(--space-4);color:var(--mk-grey-400);font-size:13px;margin-top:var(--space-7)}
+.text-center{text-align:center}
+.mt-5{margin-top:var(--space-5)}
+.spinner{display:inline-block;width:18px;height:18px;border:3px solid rgba(255,255,255,0.3);border-top-color:var(--mk-white);border-radius:50%;animation:spin 0.6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mcq-option{display:block;width:100%;text-align:left;padding:var(--space-4);margin-bottom:var(--space-2);background:var(--mk-white);border:2px solid var(--mk-grey-200);border-radius:var(--radius-md);font-family:inherit;font-size:15px;cursor:pointer;transition:all 0.15s ease}
+.mcq-option:hover{border-color:var(--mk-blue);background:#f0f6ff}
+.mcq-option--selected{border-color:var(--mk-blue);background:#e8f0fb}
+.mcq-option--correct{border-color:var(--mk-success);background:var(--mk-success-bg)}
+.mcq-option--incorrect{border-color:var(--mk-error);background:var(--mk-error-bg)}
+.mcq-option:disabled{cursor:default;opacity:0.9}
+.sa-field{margin-bottom:var(--space-5)}
+.sa-field label{display:block;font-weight:bold;margin-bottom:var(--space-2);color:var(--mk-navy)}
+.sa-field textarea{width:100%;min-height:100px;padding:var(--space-3);border:2px solid var(--mk-grey-200);border-radius:var(--radius-md);font-family:inherit;font-size:15px;resize:vertical}
+.sa-field textarea:focus{outline:none;border-color:var(--mk-blue);box-shadow:0 0 0 3px rgba(46,117,182,0.15)}
+.sa-criteria{background:var(--mk-amber-bg);border-left:4px solid var(--mk-gold);padding:var(--space-4);border-radius:var(--radius-sm);margin-top:var(--space-3);font-size:14px;display:none}
+.result-box{text-align:center;padding:var(--space-6);background:var(--mk-white);border-radius:var(--radius-lg);border:2px solid var(--mk-grey-200);box-shadow:var(--shadow-md)}
+.result-box--pass{border-color:var(--mk-success);background:var(--mk-success-bg)}
+.result-box--fail{border-color:var(--mk-error);background:var(--mk-error-bg)}
+.result-score{font-size:48px;font-weight:bold;color:var(--mk-navy)}
+.kc-question{background:var(--mk-white);border:1px solid var(--mk-grey-200);border-radius:var(--radius-md);padding:var(--space-4);margin-bottom:var(--space-4)}
+.kc-question__text{font-weight:bold;color:var(--mk-navy);margin-bottom:var(--space-3)}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#" onclick="event.preventDefault();if(state.learner){showView('view-dashboard');renderDashboard();}">
+      <img src="MK_LOGO.png" alt="MK Global" class="brand__logo" onerror="this.style.display='none'">
+      <div class="brand__text">MK Global SA<br><span style="font-size:12px;font-weight:normal;opacity:0.8">Courier Driver Training</span></div>
+    </a>
+    <div class="header-progress" id="headerProgress"></div>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- ACCESS GATE -->
+<div class="view is-active" id="view-access">
+  <div class="card text-center">
+    <span class="eyebrow">Restricted access</span>
+    <h1 id="gate-title">Inter-City and High-Volume Parcel Routes</h1>
+    <p class="lead">Stream 5 of the Courier Driver Training programme</p>
+    <div class="callout callout--warning"><span class="callout__title">Prerequisite</span>This stream builds on the Core Courier Driver Fundamentals (Stream 1). Please complete Stream 1 before starting this course.</div>
+    <p id="gate-status">Checking your access...</p>
+    <div class="field" id="codeField" style="display:none;">
+      <label for="codeInput">Paste your access token</label>
+      <input type="text" id="codeInput" autocomplete="off" placeholder="Paste the token from your email">
+      <button class="btn btn--primary btn--full" id="codeSubmit" type="button">Verify</button>
+      <p class="field__hint text-center mt-5">You received this token by email after purchasing. <a href="https://mkglobal.co.za/products.html">Purchase this course</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- REGISTRATION -->
+<div class="view" id="view-registration">
+  <div class="card">
+    <span class="eyebrow">Almost there</span>
+    <h1>Tell us about yourself</h1>
+    <p>Your name will appear on your certificate if you pass the assessment.</p>
+    <form id="regForm" novalidate>
+      <div class="field" id="regNameField">
+        <label for="regName">Full name</label>
+        <input type="text" id="regName" placeholder="e.g. Sipho Dlamini" autocomplete="name" required>
+        <div class="field__error">Please enter your full name.</div>
+      </div>
+      <div class="field" id="regEmailField">
+        <label for="regEmail">Email address</label>
+        <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email" required>
+        <div class="field__error">Please enter a valid email address.</div>
+      </div>
+      <div class="field" id="regCompanyField">
+        <label for="regCompany">Company (optional)</label>
+        <input type="text" id="regCompany" placeholder="e.g. FastTrack Couriers">
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Start the Course</button>
+    </form>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="view" id="view-dashboard">
+  <div class="card">
+    <span class="eyebrow">Stream 5: Inter-City and High-Volume Parcel Routes</span>
+    <h1>Your Course Dashboard</h1>
+    <p id="dashGreeting"></p>
+    <div class="progress">
+      <div class="progress__label"><span id="progressText">0 of 8 sessions complete</span><span id="progressPercent">0%</span></div>
+      <div class="progress__bar"><div class="progress__fill" id="progressFill" role="progressbar" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"></div></div>
+    </div>
+    <h2 style="margin-top:var(--space-4)">Sessions</h2>
+    <ul class="lesson-list" id="lessonList"></ul>
+    <div class="assessment-card assessment-card--locked" id="assessmentCard">
+      <div class="assessment-card__badge" id="assessmentBadge">&#9734;</div>
+      <div class="assessment-card__body">
+        <div class="assessment-card__title">Final Assessment</div>
+        <div class="assessment-card__meta" id="assessmentMeta">15 questions, 80% pass mark. Complete all sessions to unlock.</div>
+      </div>
+      <div class="assessment-card__action" id="assessmentAction"><span class="lock-icon" aria-hidden="true"></span> Locked</div>
+    </div>
+    <div style="margin-top:var(--space-6);text-align:center">
+      <button class="btn btn--secondary" id="resetProgress" style="font-size:13px">Reset all progress</button>
+    </div>
+  </div>
+</div>
+
+<!-- SESSION VIEW -->
+<div class="view" id="view-lesson">
+  <div class="card">
+    <button class="btn btn--secondary" id="backToDash" style="margin-bottom:var(--space-4)">&larr; Back to Dashboard</button>
+    <span class="eyebrow" id="lessonEyebrow"></span>
+    <h1 id="lesson-title"></h1>
+    <div id="lessonBody"></div>
+  </div>
+</div>
+
+<!-- ASSESSMENT VIEW -->
+<div class="view" id="view-assessment">
+  <div class="card">
+    <button class="btn btn--secondary" id="backToDashFromAss" style="margin-bottom:var(--space-4)">&larr; Back to Dashboard</button>
+    <span class="eyebrow">Final Assessment</span>
+    <h1>Inter-City and High-Volume Parcel Routes</h1>
+    <div id="ass-intro">
+      <p class="lead">This assessment has 15 questions: 10 multiple choice and 5 short answer. You need 80% to pass and earn your Training Attended certificate.</p>
+      <div class="meta-row">
+        <span class="meta-pill">15 questions</span>
+        <span class="meta-pill">80% pass mark</span>
+        <span class="meta-pill">10 MCQ + 5 short answer</span>
+      </div>
+      <button class="btn btn--gold btn--full" id="startAssBtn">Begin Assessment</button>
+    </div>
+    <div id="ass-running" style="display:none"></div>
+    <div id="ass-result" style="display:none"></div>
+  </div>
+</div>
+
+<!-- ACTION PLAN VIEW -->
+<div class="view" id="view-actionplan">
+  <div class="card">
+    <button class="btn btn--secondary" id="backToDashFromAP" style="margin-bottom:var(--space-4)">&larr; Back to Dashboard</button>
+    <span class="eyebrow">Your Action Plan</span>
+    <h1>Putting Your Training Into Practice</h1>
+    <p class="lead">This Action Plan turns what you have learned into daily habits for safe, efficient long-distance and high-volume work.</p>
+    <div id="actionPlanBody"></div>
+  </div>
+</div>
+
+<!-- CERTIFICATE VIEW -->
+<div class="view" id="view-certificate">
+  <div class="card text-center">
+    <span class="eyebrow">Congratulations</span>
+    <h1>You passed!</h1>
+    <p id="certMessage"></p>
+    <div id="certPreview" style="margin:var(--space-5) 0;padding:var(--space-6);border:2px solid var(--mk-gold);border-radius:var(--radius-lg);background:var(--mk-white)">
+      <p style="font-size:13px;text-transform:uppercase;letter-spacing:2px;color:var(--mk-grey-400);margin-bottom:var(--space-3)">MK Global SA (Pty) Ltd</p>
+      <h2 style="color:var(--mk-navy);margin-top:0">Certificate of Training Attended</h2>
+      <p style="font-size:15px;color:var(--mk-grey-700)">This certifies that</p>
+      <p style="font-size:24px;font-weight:bold;color:var(--mk-navy)" id="certName"></p>
+      <p style="font-size:15px;color:var(--mk-grey-700)">has completed the</p>
+      <p style="font-size:18px;font-weight:bold;color:var(--mk-blue)">Inter-City and High-Volume Parcel Routes</p>
+      <p style="font-size:15px;color:var(--mk-grey-700)">of the Courier Driver Training programme.</p>
+      <p style="font-size:13px;color:var(--mk-grey-400);margin-top:var(--space-5)">Date: <span id="certDate"></span> | Ref: <span id="certRef"></span></p>
+      <p style="font-size:11px;color:var(--mk-grey-400);margin-top:var(--space-3)">This certificate confirms attendance of a professional development programme. It is not a formal SAQA qualification and does not replace any licence, permit, or certificate required by law.</p>
+    </div>
+    <button class="btn btn--gold btn--full" id="downloadCert">Download Certificate (PDF)</button>
+    <p class="field__hint mt-5" id="emailStatus"></p>
+    <button class="btn btn--secondary btn--full mt-5" id="backToDashFromCert">&larr; Back to Dashboard</button>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 MK Global SA (Pty) Ltd. All rights reserved.<br>info@mkglobal.co.za</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+"use strict";
+
+/* ---- CONFIGURATION ---- */
+/* Token-based access, issued by the Paystack webhook after purchase.
+   See api/courses/webhook.js and api/courses/validate.js in the
+   mkglobal-website repo. PRODUCT_ID must match api/_lib/products.js. */
+const PRODUCT_ID = "courier-intercity";
+const VALIDATE_URL = "https://mkglobal.co.za/api/courses/validate";
+const BUY_URL = "https://mkglobal.co.za/products.html";
+const TOKEN_STORAGE_KEY = "mkg_access_token";
+
+function base64urlDecode(str) {
+  str = str.replace(/-/g, "+").replace(/_/g, "/");
+  while (str.length % 4) str += "=";
+  return atob(str);
+}
+
+const EMAILJS_CONFIG = {
+  enabled: false,
+  serviceId: "",
+  templateId: "",
+  publicKey: ""
+};
+
+const SESSIONS = [
+  { id: 1, title: "Long-Distance Driving and Fatigue",  minutes: 15 },
+  { id: 2, title: "Checking Your Vehicle",               minutes: 12 },
+  { id: 3, title: "Planning a High-Volume Load",         minutes: 12 },
+  { id: 4, title: "Securing Big Loads",                   minutes: 12 },
+  { id: 5, title: "Route and Fuel Efficiency",            minutes: 12 },
+  { id: 6, title: "Working at Hubs and Depots",           minutes: 12 },
+  { id: 7, title: "Communication and Dispatch",           minutes: 12 },
+  { id: 8, title: "Safety and Emergencies Far From Home", minutes: 15 }
+];
+
+const SESSION_CONTENT = {
+1: {
+  intro: "On a long route, tiredness is one of your biggest risks. A tired driver is as dangerous as a drunk one. Know the signs and act before it is too late.",
+  outcomes: [
+    "Recognise the warning signs of fatigue.",
+    "Take the right action when tired.",
+    "Plan a long trip to prevent fatigue."
+  ],
+  sections: [
+    { h: "The warning signs", body: "<div class='diagram-wrap'><img src='IC_Diagram_1_Fatigue.png' alt='Fatigue warning signs and actions: yawning, drifting, slow reactions. Action: stop and rest.' loading='lazy'><div class='diagram-wrap__caption'>Fatigue Warning Signs and Actions</div></div><p>Watch for these signs that fatigue is building:</p><ul class='bullet-list'><li>Frequent yawning and heavy eyelids.</li><li>Drifting in the lane or missing a turn.</li><li>Not remembering the last stretch of road.</li><li>Restlessness and slow reactions.</li></ul><p>Fatigue builds quietly. You are often the last to notice.</p>" },
+    { h: "What to do about it", body: "<ul class='bullet-list'><li><strong>Stop and rest</strong> rather than pushing on. A late parcel can be explained; a crash cannot be undone.</li><li><strong>Get enough sleep</strong> before the trip.</li><li><strong>Eat well and stay hydrated.</strong></li><li><strong>Plan rest stops</strong> into the route before you set off.</li></ul><div class='callout callout--dont'><span class='callout__title'>No delivery is worth a life</span>Falling asleep at the wheel, even for a second, can be fatal. If you feel tired, stop and rest. Plan your trip so you never have to choose between sleep and a deadline.</div>" }
+  ],
+  notes: "What is one thing you will change to manage fatigue on long trips?",
+  takeaway: "A tired driver is as dangerous as a drunk one. If you feel drowsy, stop and rest. No delivery is worth your life."
+},
+2: {
+  intro: "A long route in a bigger vehicle needs a deeper check than local work. A breakdown far from home is far more serious.",
+  outcomes: [
+    "Carry out a deeper pre-trip check than for local work.",
+    "Explain why each check matters more over distance.",
+    "Recognise faults that should stop a trip."
+  ],
+  sections: [
+    { h: "The extended pre-trip check", body: "<div class='diagram-wrap'><img src='IC_Diagram_2_VehicleChecks.png' alt='Four vehicle check areas: tyres, fluids and fuel, lights and brakes, load security.' loading='lazy'><div class='diagram-wrap__caption'>Long-Haul Vehicle Check Areas</div></div><p>Check these four areas before every long route:</p><ul class='bullet-list'><li><strong>Tyres:</strong> condition, tread, and pressure on every tyre, including the spare. A heavy load over distance puts more stress on tyres.</li><li><strong>Fluids and fuel:</strong> oil, coolant, and water topped up. Enough fuel for the leg ahead, with a margin.</li><li><strong>Lights and brakes:</strong> all working. The trip will cross changing light and weather.</li><li><strong>Load security:</strong> secure and balanced before a long trip where shifts are more likely.</li></ul><p>Check the vehicle cold, before setting off.</p>" },
+    { h: "When a fault should stop the trip", body: "<div class='callout callout--warning'><span class='callout__title'>If a fault affects safety</span>Any fault that affects safety, such as worn tyres or failing brakes, should stop the trip until it is fixed. You are responsible for not setting off in an unsafe vehicle.</div><ul class='checklist'><li><input type='checkbox'><span>Tyres: condition, tread, and pressure on every tyre, including the spare.</span></li><li><input type='checkbox'><span>Fluids: oil, coolant, and water topped up.</span></li><li><input type='checkbox'><span>Fuel: enough for the leg ahead, with a margin.</span></li><li><input type='checkbox'><span>Lights and indicators all working.</span></li><li><input type='checkbox'><span>Brakes working properly.</span></li><li><input type='checkbox'><span>Load secure and balanced.</span></li></ul>" }
+  ],
+  notes: "",
+  takeaway: "A long route needs a deeper check. A breakdown far from home is serious. Check tyres, fluids, brakes, and load security before every trip."
+},
+3: {
+  intro: "With a big load and many stops, how you pack the vehicle decides how smoothly the whole route runs.",
+  outcomes: [
+    "Plan the loading order for a high-volume round.",
+    "Balance the load correctly in a larger vehicle.",
+    "Keep the load organised and findable."
+  ],
+  sections: [
+    { h: "How to plan a high-volume load", body: "<ul class='bullet-list'><li><strong>Load to match your delivery order</strong> so the first drops are reachable first.</li><li><strong>Keep heavy items low and forward</strong> to balance the vehicle.</li><li><strong>Group parcels by destination or leg.</strong></li><li><strong>Keep the load organised</strong> so nothing is buried or lost.</li><li><strong>For pallets and cages,</strong> keep them in order and labelled.</li></ul><div class='callout callout--gold'><span class='callout__title'>The load plan is the route plan</span>A badly packed vehicle wastes time at every stop as you search and re-stack. Time spent planning the load before you leave is repaid many times over on the road.</div>" },
+    { h: "Load planning worksheet", body: "<p>Plan a high-volume round. List your legs or areas and what goes where.</p><div class='sa-field'><label>Leg 1</label><textarea placeholder='Area, parcels, position in vehicle...'></textarea></div><div class='sa-field'><label>Leg 2</label><textarea placeholder='Area, parcels, position in vehicle...'></textarea></div><div class='sa-field'><label>Leg 3</label><textarea placeholder='Area, parcels, position in vehicle...'></textarea></div><div class='sa-field'><label>Leg 4</label><textarea placeholder='Area, parcels, position in vehicle...'></textarea></div>" }
+  ],
+  notes: "",
+  takeaway: "Load to match your delivery order, keep heavy items low and forward, and organise so nothing is buried. A good load plan saves time at every stop."
+},
+4: {
+  intro: "On a long, fast trip a poorly secured load has far more time and force to shift. A load that moves can damage goods, unbalance the vehicle, and cause a crash.",
+  outcomes: [
+    "Secure large and heavy loads correctly.",
+    "Explain why securing matters more over distance.",
+    "Re-check a load during a journey."
+  ],
+  sections: [
+    { h: "The rules of securing a big load", body: "<div class='diagram-wrap'><img src='IC_Diagram_4_SecuringLoads.png' alt='Cargo cross-section showing lashing rules: straps rated for weight, gaps filled, heavy low and forward.' loading='lazy'><div class='diagram-wrap__caption'>Securing Loads for Long-Distance Transport</div></div><ul class='bullet-list'><li><strong>Lash it down</strong> with straps, nets, or bars rated for the weight.</li><li><strong>Fill the gaps</strong> so nothing slides. Use dunnage if needed.</li><li><strong>Keep heavy items low and forward.</strong></li><li><strong>Re-check the load</strong> after the first stretch and at rest breaks. Straps loosen over distance.</li><li><strong>Never overload.</strong> Stay within the vehicle's rated weight and axle limits.</li></ul>" },
+    { h: "The law", body: "<div class='callout'><span class='callout__title'>Legal requirement</span>Securing your load correctly is required under the National Road Traffic Act 93 of 1996, Regulation 246. It protects you, the goods, and everyone else on the road.</div>" }
+  ],
+  notes: "",
+  takeaway: "Lash it, fill the gaps, keep heavy low and forward, re-check en route, and never overload. A shifting load on a long trip can cause a crash."
+},
+5: {
+  intro: "Over long distances, fuel is a major cost. How you plan and drive makes a real difference, as long as it never comes at the cost of safety or rest.",
+  outcomes: [
+    "Plan an efficient long-distance route.",
+    "Drive in a fuel-saving way.",
+    "Balance efficiency with safety and rest."
+  ],
+  sections: [
+    { h: "Plan an efficient route", body: "<ul class='bullet-list'><li>Choose efficient roads and avoid known congestion and roadworks.</li><li>Plan fuel stops and rest stops together.</li><li>Allow enough time so you are never rushing.</li></ul>" },
+    { h: "Drive to save fuel", body: "<ul class='bullet-list'><li><strong>Accelerate and brake smoothly.</strong></li><li><strong>Keep a steady, efficient speed.</strong></li><li><strong>Avoid unnecessary idling.</strong></li><li><strong>Keep tyres correctly inflated.</strong></li></ul><div class='callout callout--do'><span class='callout__title'>Smooth driving saves fuel and tyres</span>Hard acceleration and heavy braking burn fuel and wear out tyres and brakes. Smooth, steady driving saves all three, and is safer too.</div><p>Efficiency must never come at the cost of safety or rest. The aim is to drive smarter, not to rush or skip breaks.</p>" }
+  ],
+  notes: "",
+  takeaway: "Plan smart, drive smooth. Efficiency saves fuel and money, but never at the cost of safety or rest."
+},
+6: {
+  intro: "A depot yard is one of the busiest and most dangerous places you work, with vehicles, equipment, and people moving all the time.",
+  outcomes: [
+    "Follow depot site rules and signage.",
+    "Dock the vehicle safely.",
+    "Turn around efficiently at a hub."
+  ],
+  sections: [
+    { h: "Working a depot safely", body: "<div class='diagram-wrap'><img src='IC_Diagram_3_HubOperations.png' alt='Four dock steps: follow site rules, dock slowly and squarely, secure before unloading, check paperwork and go.' loading='lazy'><div class='diagram-wrap__caption'>Hub and Depot Operations</div></div><p>Follow these four steps at every depot:</p><ul class='bullet-list'><li><strong>1. Follow site rules.</strong> Obey speed limits, signage, and floor markings.</li><li><strong>2. Dock slowly and squarely.</strong> Reverse under guidance and use a spotter where available.</li><li><strong>3. Secure before unloading.</strong> Apply the brake, switch off, and chock if needed before anyone enters the load area.</li><li><strong>4. Check paperwork and go.</strong> Confirm the load, sign the documents, and clear the bay promptly for the next vehicle.</li></ul>" },
+    { h: "Reversing to a dock", body: "<div class='callout callout--warning'><span class='callout__title'>The yard has its own rules</span>Every depot has its own safety rules. Follow them, not your own habits. Slow, guided, and aware is how a professional moves in a yard. Reversing to a dock is where many yard accidents happen.</div>" }
+  ],
+  notes: "",
+  takeaway: "Follow site rules, dock slowly under guidance, secure before unloading, and clear the bay promptly. The yard is one of the most dangerous places you work."
+},
+7: {
+  intro: "On a long run, you are often the only person who knows what is happening on the road. Clear communication with dispatch keeps everyone informed and safe.",
+  outcomes: [
+    "Keep dispatch informed at the right points.",
+    "Communicate safely without distraction while driving.",
+    "Report delays and problems clearly."
+  ],
+  sections: [
+    { h: "When to check in", body: "<ul class='bullet-list'><li><strong>Confirm departure and arrival.</strong></li><li><strong>Report delays, problems, or route changes.</strong></li><li><strong>Check in at agreed points</strong> on a long run.</li></ul><p>A driver who reports a delay early gives the company time to manage it. A driver who stays silent leaves everyone guessing.</p>" },
+    { h: "Communicate safely", body: "<div class='callout callout--dont'><span class='callout__title'>Communicate, but never while distracted</span>Using a handheld phone while driving is dangerous and unlawful. Pull over to communicate. A few minutes stopped is always safer than a call taken at the wheel.</div><p>What makes a good report: clear, factual, and timely, so dispatch can act.</p>" }
+  ],
+  notes: "At what points will you check in with dispatch on a long run?",
+  takeaway: "Keep dispatch informed: confirm departure, report delays, and check in at agreed points. Always pull over before using your phone."
+},
+8: {
+  intro: "Being far from home changes how you handle a problem. Help is further away, so you must be more self-reliant and safety-conscious.",
+  outcomes: [
+    "Respond safely to a breakdown far from home.",
+    "Stay safe and secure on long and remote routes.",
+    "Set personal goals for inter-city work."
+  ],
+  sections: [
+    { h: "If you break down", body: "<ul class='bullet-list'><li><strong>Get the vehicle safely off the road.</strong></li><li><strong>Put on hazard lights</strong> and set out a warning triangle.</li><li><strong>Stay with the vehicle</strong> in a safe, visible spot.</li><li><strong>Contact dispatch and roadside assistance.</strong></li></ul>" },
+    { h: "Staying safe and secure", body: "<ul class='bullet-list'><li>Plan safe stops and be cautious at isolated places.</li><li>Keep the vehicle locked and secure.</li><li>Do not take risks with the load or with strangers.</li><li>Carry a charged phone, emergency numbers, water, and basic supplies.</li></ul><div class='callout callout--success'><span class='callout__title'>Self-reliance and safety first</span>Far from home, you are the first responder to your own situation. Stay calm, safe, and visible. Your personal safety always comes before the vehicle or the load. No cargo is worth your wellbeing.</div>" }
+  ],
+  notes: "",
+  takeaway: "Far from home, you are your own first responder. Stay calm, stay safe, and put your personal safety before the vehicle or the load."
+}
+};
+
+const KNOWLEDGE_CHECKS = {
+1: [
+  { q: "A tired driver is as dangerous as:", opts: ["A distracted one","A drunk one","A new one"], correct: 1 },
+  { q: "You start to feel drowsy on a long drive. What should you do?", opts: ["Open the window and push on","Stop and rest","Speed up to finish sooner"], correct: 1 },
+  { q: "When should you plan rest stops?", opts: ["Only if you feel tired","Before you set off","After the first hour"], correct: 1 }
+],
+2: [
+  { q: "Why does a long route need a deeper vehicle check?", opts: ["It does not; the same check is fine","A breakdown far from home is more serious","Only for bigger vehicles"], correct: 1 },
+  { q: "A safety fault is found during your pre-trip check. What should you do?", opts: ["Drive carefully and fix it later","Stop the trip until it is fixed","Ignore it if it is small"], correct: 1 },
+  { q: "Which tyre must you also check before a long trip?", opts: ["Only the front tyres","The spare tyre","Only the rear tyres"], correct: 1 }
+],
+3: [
+  { q: "How should you load a high-volume round?", opts: ["Randomly to save time","To match your delivery order","Heaviest at the very back"], correct: 1 },
+  { q: "Where should heavy items go in the vehicle?", opts: ["High and at the back","Low and forward","On top of lighter items"], correct: 1 },
+  { q: "Why does a well-planned load save time?", opts: ["It makes the vehicle lighter","You do not search and re-stack at every stop","It uses less fuel"], correct: 1 }
+],
+4: [
+  { q: "What should you use to secure a large load?", opts: ["Rope and hope","Straps, nets, or bars rated for the weight","Nothing if the doors are closed"], correct: 1 },
+  { q: "When should you re-check a load on a long trip?", opts: ["Only at the destination","After the first stretch and at rest breaks","Never, once it is loaded"], correct: 1 },
+  { q: "What law requires you to secure your load?", opts: ["Consumer Protection Act","National Road Traffic Act 93 of 1996, Regulation 246","Occupational Health and Safety Act"], correct: 1 }
+],
+5: [
+  { q: "Which driving style saves fuel?", opts: ["Hard acceleration and heavy braking","Smooth, steady driving","Frequent high-speed bursts"], correct: 1 },
+  { q: "Should you skip rest breaks to save fuel?", opts: ["Yes, idling wastes fuel","No, efficiency must never cost safety or rest","Only on short runs"], correct: 1 },
+  { q: "What else does smooth driving save besides fuel?", opts: ["Nothing else","Tyres and brakes","Only time"], correct: 1 }
+],
+6: [
+  { q: "How should you reverse to a depot dock?", opts: ["Quickly to clear the bay","Slowly, squarely, and under guidance","Without a spotter to save time"], correct: 1 },
+  { q: "What must you do before anyone enters the load area at a dock?", opts: ["Nothing special","Secure the vehicle: brake, switch off, chock if needed","Sound the horn"], correct: 1 },
+  { q: "Whose safety rules apply in a depot yard?", opts: ["Your own habits","That depot's rules","The rules from your home base"], correct: 1 }
+],
+7: [
+  { q: "When should you report a delay to dispatch?", opts: ["Only when you arrive late","As early as possible","Only if asked"], correct: 1 },
+  { q: "How should you use your phone on a long run?", opts: ["Hold it while driving to save time","Pull over before making calls","Only use it at the destination"], correct: 1 },
+  { q: "What makes a good report to dispatch?", opts: ["Long and detailed","Clear, factual, and timely","Only good news"], correct: 1 }
+],
+8: [
+  { q: "Your vehicle breaks down far from home. What matters most?", opts: ["Protecting the load at all costs","Your personal safety","Fixing it yourself quickly"], correct: 1 },
+  { q: "What should you carry on a long run?", opts: ["Nothing extra","A charged phone, emergency numbers, water, and basic supplies","Only a spare tyre"], correct: 1 },
+  { q: "At an isolated stop, what should you do?", opts: ["Leave the vehicle unlocked for fresh air","Keep the vehicle locked and be cautious","Invite strangers to help watch the load"], correct: 1 }
+]
+};
+
+const MCQ_QUESTIONS = [
+  { q: "You start to feel drowsy on a long drive. What is the safe choice?", opts: ["Open a window and push on","Speed up to finish sooner","Stop and rest"] },
+  { q: "How dangerous is a tired driver?", opts: ["Less dangerous than a careless one","As dangerous as a drunk one","Only a risk at night"] },
+  { q: "Which should you check before a long trip that is easy to forget?", opts: ["The radio","The seat position","The spare tyre"] },
+  { q: "You find a safety fault during your pre-trip check. What should you do?", opts: ["Drive carefully and fix it later","Ignore it if it is small","Stop the trip until it is fixed"] },
+  { q: "How should you load a high-volume round?", opts: ["Heaviest at the very back","Randomly, to save time","To match your delivery order, heavy low and forward"] },
+  { q: "How do you keep a large load safe over a long trip?", opts: ["Drive slowly and hope it holds","Lash it with rated straps and re-check it en route","Pack it loosely so it settles"] },
+  { q: "Which driving style saves fuel, tyres, and brakes?", opts: ["Hard acceleration and heavy braking","Smooth, steady driving","Frequent high-speed bursts"] },
+  { q: "How should you reverse to a depot dock?", opts: ["Quickly to clear the bay","Slowly, squarely, and under guidance","Without a spotter to save time"] },
+  { q: "How should you communicate with dispatch on a long run?", opts: ["Hold the phone while driving","Pull over to make calls","Only call when you arrive"] },
+  { q: "Your vehicle breaks down far from home. What matters most?", opts: ["Protecting the load at all costs","Fixing it yourself quickly","Your personal safety, before the vehicle or load"] }
+];
+
+// Verified indices: [2,1,2,2,2,1,1,1,1,2]
+// Handover had Q4, Q6, Q8 wrong
+const MCQ_KEYS_ENC = ["MDoy","MTox","Mjoy","Mzoy","NDoy","NTox","Njox","Nzox","ODox","OToy"];
+
+function checkMCQ(qIdx, selectedIdx) {
+  return btoa(qIdx + ":" + selectedIdx) === MCQ_KEYS_ENC[qIdx];
+}
+
+const SA_QUESTIONS = [
+  { q: "List three warning signs of fatigue and say what you should do.", criteria: "Award marks for any three signs (yawning, heavy eyelids, drifting, missing turns, not remembering the road, slow reactions) and for the action: stop and rest, do not push on." },
+  { q: "Why does a long route need a deeper vehicle check than local work?", criteria: "Award marks for: a breakdown far from home is more serious, the vehicle is bigger and the load heavier, and the trip crosses changing conditions, so tyres, fluids, brakes, and load security all matter more." },
+  { q: "Describe how you would secure a large load for a long trip.", criteria: "Award marks for: lash it down with rated straps or bars, fill gaps so nothing slides, keep heavy low and forward, re-check en route, and never overload the vehicle." },
+  { q: "List the steps for safely docking at a depot.", criteria: "Award marks for: follow site rules, dock slowly and squarely under guidance, secure the vehicle before unloading, and confirm paperwork before clearing the bay." },
+  { q: "Your vehicle breaks down far from home. What do you do?", criteria: "Award marks for: get safely off the road, hazard lights and warning triangle, stay safe and visible, and contact dispatch and assistance. Personal safety before the load." }
+];
+
+const STORAGE_KEY = "mkg_courier_intercity_state";
+const defaultState = {
+  accessGranted: false,
+  accessCodeUsed: null,
+  learner: null,
+  completedSessions: [],
+  finalResult: null
+};
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return structuredClone(defaultState);
+    return Object.assign(structuredClone(defaultState), JSON.parse(raw));
+  } catch(e) { return structuredClone(defaultState); }
+}
+function saveState(s) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch(e) {}
+}
+let state = loadState();
+
+function showView(id) {
+  document.querySelectorAll(".view").forEach(v => v.classList.remove("is-active"));
+  const next = document.getElementById(id);
+  if (next) { next.classList.add("is-active"); window.scrollTo({ top: 0, behavior: "smooth" }); }
+}
+
+function route() {
+  if (!state.accessGranted) { showView("view-access"); return; }
+  if (!state.learner)        { showView("view-registration"); return; }
+  showView("view-dashboard");
+  renderDashboard();
+}
+
+/* ---- ACCESS TOKEN GATE ---- */
+async function wireAccessGate() {
+  const gateStatus = document.getElementById("gate-status");
+  const gateForm = document.getElementById("codeField");
+  const input = document.getElementById("codeInput");
+  const submit = document.getElementById("codeSubmit");
+
+  submit.addEventListener("click", () => validateAndGrant(input.value.trim()));
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") validateAndGrant(input.value.trim());
+  });
+
+  // Already granted? Confirm the stored token has not expired before
+  // trusting it, an expired token must re-gate rather than stay open.
+  if (state.accessGranted) {
+    const stored = localStorage.getItem(TOKEN_STORAGE_KEY);
+    if (stored) {
+      try {
+        const payload = JSON.parse(base64urlDecode(stored.split(".")[0]));
+        if (payload.exp && payload.exp < Date.now()) {
+          state.accessGranted = false;
+          saveState(state);
+          localStorage.removeItem(TOKEN_STORAGE_KEY);
+        } else {
+          return;
+        }
+      } catch {
+        state.accessGranted = false;
+        saveState(state);
+        localStorage.removeItem(TOKEN_STORAGE_KEY);
+      }
+    } else {
+      return;
+    }
+  }
+
+  // Check the URL for the ?token= param from the purchase email link.
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get("token");
+
+  if (token) {
+    await validateAndGrant(token);
+  } else {
+    if (gateStatus) gateStatus.textContent = "Enter the access token from your purchase email.";
+    if (gateForm) gateForm.style.display = "block";
+  }
+}
+
+async function validateAndGrant(token) {
+  const gateStatus = document.getElementById("gate-status");
+  const gateForm = document.getElementById("codeField");
+  const submit = document.getElementById("codeSubmit");
+
+  if (!token) {
+    if (gateStatus) gateStatus.textContent = "Enter the access token from your purchase email.";
+    if (gateForm) gateForm.style.display = "block";
+    return;
+  }
+
+  if (gateStatus) gateStatus.textContent = "Validating your access...";
+  if (gateForm) gateForm.style.display = "none";
+  if (submit) { submit.disabled = true; submit.textContent = "Checking..."; }
+
+  try {
+    const res = await fetch(
+      VALIDATE_URL + "?token=" + encodeURIComponent(token) +
+      "&productId=" + encodeURIComponent(PRODUCT_ID)
+    );
+    const data = await res.json();
+
+    if (data.valid) {
+      state.accessGranted = true;
+      state.accessCodeUsed = token;
+      saveState(state);
+      localStorage.setItem(TOKEN_STORAGE_KEY, token);
+      const clean = window.location.pathname + window.location.hash;
+      window.history.replaceState({}, "", clean);
+      showView("view-registration");
+    } else {
+      if (gateStatus) gateStatus.textContent =
+        "This access link is " + (data.reason && data.reason.toLowerCase().includes("expired") ? "expired" : "not valid") +
+        ". Purchase the course or paste your token below.";
+      if (gateForm) gateForm.style.display = "block";
+      if (submit) { submit.disabled = false; submit.textContent = "Verify"; }
+    }
+  } catch {
+    if (gateStatus) gateStatus.textContent =
+      "Could not verify your access. Check your connection and try again.";
+    if (gateForm) gateForm.style.display = "block";
+    if (submit) { submit.disabled = false; submit.textContent = "Verify"; }
+  }
+}
+
+function wireRegistration() {
+  const form = document.getElementById("regForm");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const fields = {
+      regName:  { el: document.getElementById("regName"),  wrap: document.getElementById("regNameField"),  validate: v => v.trim().length >= 2 },
+      regEmail: { el: document.getElementById("regEmail"), wrap: document.getElementById("regEmailField"), validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) }
+    };
+    let allValid = true;
+    Object.values(fields).forEach(f => {
+      const ok = f.validate(f.el.value);
+      f.wrap.classList.toggle("field--error", !ok);
+      if (!ok) allValid = false;
+    });
+    if (!allValid) return;
+    state.learner = {
+      name: fields.regName.el.value.trim(),
+      email: fields.regEmail.el.value.trim(),
+      company: document.getElementById("regCompany").value.trim(),
+      enrolledAt: new Date().toISOString()
+    };
+    saveState(state);
+    renderDashboard();
+    showView("view-dashboard");
+  });
+}
+
+function renderDashboard() {
+  if (!state.learner) return;
+  const greeting = document.getElementById("dashGreeting");
+  const firstName = state.learner.name.split(" ")[0];
+  greeting.textContent = "Welcome, " + firstName + ". Work through the sessions in order. Your progress is saved on this device automatically.";
+  const list = document.getElementById("lessonList");
+  list.innerHTML = "";
+  let currentId = null;
+  for (let i = 0; i < SESSIONS.length; i++) {
+    const s = SESSIONS[i];
+    const prevDone = i === 0 || state.completedSessions.includes(SESSIONS[i-1].id);
+    if (prevDone && !state.completedSessions.includes(s.id)) { currentId = s.id; break; }
+  }
+  SESSIONS.forEach((session, idx) => {
+    const isDone = state.completedSessions.includes(session.id);
+    const isUnlocked = idx === 0 || state.completedSessions.includes(SESSIONS[idx-1].id);
+    const isCurrent = session.id === currentId;
+    const li = document.createElement("li");
+    li.className = "lesson-list__item";
+    if (isDone) li.classList.add("lesson-list__item--done");
+    if (!isUnlocked) li.classList.add("lesson-list__item--locked");
+    if (isUnlocked) li.classList.add("lesson-list__item--clickable");
+    if (isCurrent) li.classList.add("lesson-list__item--current");
+    let statusHtml;
+    if (isDone) statusHtml = "Complete &#10003;";
+    else if (isCurrent) statusHtml = "Start &rsaquo;";
+    else if (isUnlocked) statusHtml = "Open";
+    else statusHtml = '<span class="lock-icon" aria-hidden="true"></span> Locked';
+    const numContent = isDone ? "&#10003;" : session.id;
+    li.innerHTML =
+      '<div class="lesson-num" aria-hidden="true">' + numContent + '</div>' +
+      '<div class="lesson-info">' +
+      '  <div class="lesson-info__title">Session ' + session.id + ': ' + session.title + '</div>' +
+      '  <div class="lesson-info__meta">About ' + session.minutes + ' minutes</div>' +
+      '</div>' +
+      '<div class="lesson-status">' + statusHtml + '</div>';
+    if (isUnlocked) {
+      li.setAttribute("tabindex", "0");
+      li.setAttribute("role", "button");
+      li.setAttribute("aria-label", (isDone ? "Review " : "Open ") + "Session " + session.id + ": " + session.title);
+      li.addEventListener("click", () => openSession(session.id));
+      li.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openSession(session.id); } });
+    } else li.setAttribute("aria-disabled", "true");
+    list.appendChild(li);
+  });
+  const allDone = SESSIONS.every(s => state.completedSessions.includes(s.id));
+  const card = document.getElementById("assessmentCard");
+  card.classList.toggle("assessment-card--unlocked", allDone);
+  card.classList.toggle("assessment-card--locked", !allDone);
+  const badge = document.getElementById("assessmentBadge");
+  const meta = document.getElementById("assessmentMeta");
+  const action = document.getElementById("assessmentAction");
+  if (allDone) {
+    badge.innerHTML = "&#9733;";
+    meta.textContent = "15 questions, 80% pass mark. Pass to earn your Certificate of Training Attended.";
+    action.innerHTML = "Start &rsaquo;";
+    card.setAttribute("tabindex", "0"); card.setAttribute("role", "button");
+    card.setAttribute("aria-label", "Start the final assessment");
+  } else {
+    const remaining = SESSIONS.length - state.completedSessions.length;
+    badge.innerHTML = "&#9734;";
+    meta.textContent = "15 questions, 80% pass mark. " + remaining + " session" + (remaining === 1 ? "" : "s") + " left to unlock.";
+    action.innerHTML = '<span class="lock-icon" aria-hidden="true"></span> Locked';
+    card.setAttribute("tabindex", "-1"); card.removeAttribute("role");
+  }
+  const done = state.completedSessions.length;
+  const pct = Math.round((done / SESSIONS.length) * 100);
+  document.getElementById("progressText").textContent = done + " of " + SESSIONS.length + " sessions complete";
+  document.getElementById("progressPercent").textContent = pct + "%";
+  const fill = document.getElementById("progressFill");
+  fill.style.width = pct + "%";
+  fill.setAttribute("aria-valuenow", String(done));
+  fill.classList.toggle("progress__fill--complete", done === SESSIONS.length);
+  document.getElementById("headerProgress").textContent = done + " / " + SESSIONS.length + " sessions";
+}
+
+let currentSessionId = null;
+function renderSessionBody(id) {
+  const c = SESSION_CONTENT[id];
+  const body = document.getElementById("lessonBody");
+  if (!c) { body.innerHTML = "<p>Session content coming soon.</p>"; return; }
+  let html = "";
+  html += '<p class="lead">' + c.intro + '</p>';
+  html += '<h2>What you will learn</h2><ul class="outcomes">';
+  c.outcomes.forEach(o => { html += '<li>' + o + '</li>'; });
+  html += '</ul>';
+  c.sections.forEach(s => { html += '<h2>' + s.h + '</h2>' + s.body; });
+  if (c.notes) {
+    html += '<h2>My notes</h2><div class="sa-field"><textarea placeholder="' + c.notes.replace(/"/g, '&quot;') + '"></textarea></div>';
+  }
+  html += '<div class="callout callout--success"><span class="callout__title">Key takeaway</span>' + c.takeaway + '</div>';
+  html += '<div id="kc-block-' + id + '" style="' + (state.completedSessions.includes(id) ? '' : 'display:none') + '">';
+  html += '<h2>Knowledge Check</h2><p>Answer all three questions correctly to complete this session.</p>';
+  html += '<div id="kc-container-' + id + '"></div>';
+  html += '</div>';
+  if (!state.completedSessions.includes(id)) {
+    html += '<div id="complete-btn-wrap-' + id + '" style="margin-top:var(--space-5)"><button class="btn btn--gold btn--full" id="completeBtn-' + id + '">I have finished reading - take the knowledge check</button></div>';
+  }
+  body.innerHTML = html;
+  const btn = document.getElementById("completeBtn-" + id);
+  if (btn) {
+    btn.addEventListener("click", () => {
+      const kcBlock = document.getElementById("kc-block-" + id);
+      if (kcBlock) { kcBlock.style.display = "block"; kcBlock.scrollIntoView({ behavior: "smooth" }); }
+      btn.parentElement.style.display = "none";
+      renderKnowledgeCheck(id);
+    });
+  }
+  if (state.completedSessions.includes(id)) {
+    renderKnowledgeCheck(id, true);
+  }
+}
+
+function renderKnowledgeCheck(id, alreadyPassed) {
+  const container = document.getElementById("kc-container-" + id);
+  if (!container) return;
+  const checks = KNOWLEDGE_CHECKS[id];
+  if (!checks) return;
+  if (alreadyPassed) {
+    container.innerHTML = '<div class="callout callout--success"><span class="callout__title">Knowledge check passed</span>You have already completed this session.</div>';
+    return;
+  }
+  let html = "";
+  checks.forEach((ck, qi) => {
+    html += '<div class="kc-question" id="kc-q-' + id + '-' + qi + '">';
+    html += '<div class="kc-question__text">' + (qi+1) + '. ' + ck.q + '</div>';
+    ck.opts.forEach((opt, oi) => {
+      html += '<button class="mcq-option" data-sid="' + id + '" data-qi="' + qi + '" data-oi="' + oi + '">' + opt + '</button>';
+    });
+    html += '</div>';
+  });
+  html += '<div id="kc-result-' + id + '" style="margin-top:var(--space-4)"></div>';
+  container.innerHTML = html;
+  const kcState = { answers: {}, locked: {} };
+  container.querySelectorAll(".mcq-option").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const sid = parseInt(btn.dataset.sid);
+      const qi = parseInt(btn.dataset.qi);
+      const oi = parseInt(btn.dataset.oi);
+      if (kcState.locked[qi]) return;
+      kcState.answers[qi] = oi;
+      container.querySelectorAll('[data-sid="' + sid + '"][data-qi="' + qi + '"]').forEach(b => b.classList.remove("mcq-option--selected"));
+      btn.classList.add("mcq-option--selected");
+      if (Object.keys(kcState.answers).length === checks.length) {
+        let allCorrect = true;
+        checks.forEach((ck, i) => {
+          kcState.locked[i] = true;
+          const selected = kcState.answers[i];
+          container.querySelectorAll('[data-sid="' + sid + '"][data-qi="' + i + '"]').forEach(b => {
+            b.disabled = true;
+            const boi = parseInt(b.dataset.oi);
+            if (boi === ck.correct) b.classList.add("mcq-option--correct");
+            if (boi === selected && boi !== ck.correct) { b.classList.add("mcq-option--incorrect"); allCorrect = false; }
+          });
+        });
+        const resultDiv = document.getElementById("kc-result-" + id);
+        if (allCorrect) {
+          if (!state.completedSessions.includes(id)) {
+            state.completedSessions.push(id);
+            saveState(state);
+          }
+          resultDiv.innerHTML = '<div class="callout callout--success"><span class="callout__title">All correct!</span>Session complete. Return to the dashboard to continue.</div><button class="btn btn--primary btn--full mt-5" onclick="showView(\'view-dashboard\');renderDashboard();">Back to Dashboard</button>';
+        } else {
+          resultDiv.innerHTML = '<div class="callout callout--warning"><span class="callout__title">Not quite</span>Review the correct answers above and try again.</div><button class="btn btn--secondary btn--full mt-5" onclick="renderKnowledgeCheck(' + id + ')">Try Again</button>';
+        }
+      }
+    });
+  });
+}
+
+function openSession(id) {
+  const session = SESSIONS.find(s => s.id === id);
+  if (!session) return;
+  currentSessionId = id;
+  document.getElementById("lessonEyebrow").textContent = "Session " + session.id + " of " + SESSIONS.length;
+  document.getElementById("lesson-title").textContent = session.title;
+  renderSessionBody(id);
+  showView("view-lesson");
+}
+
+function wireSessionView() {
+  document.getElementById("backToDash").addEventListener("click", () => { showView("view-dashboard"); renderDashboard(); });
+}
+
+function wireDashboardActions() {
+  document.getElementById("resetProgress").addEventListener("click", () => {
+    if (confirm("This will erase your registration and all progress on this device. Are you sure?")) {
+      state = structuredClone(defaultState); saveState(state);
+      currentSessionId = null;
+      document.getElementById("headerProgress").textContent = "";
+      document.getElementById("regForm").reset();
+      document.getElementById("codeInput").value = "";
+      document.getElementById("gate-status").textContent = "Enter the access token from your purchase email.";
+      document.getElementById("codeField").style.display = "block";
+      showView("view-access");
+    }
+  });
+  const ac = document.getElementById("assessmentCard");
+  function startAssessmentIfUnlocked() {
+    if (!ac.classList.contains("assessment-card--unlocked")) return;
+    const intro = document.getElementById("ass-intro");
+    const running = document.getElementById("ass-running");
+    const result = document.getElementById("ass-result");
+    if (intro) intro.style.display = "block";
+    if (running) running.style.display = "none";
+    if (result) result.style.display = "none";
+    showView("view-assessment");
+  }
+  ac.addEventListener("click", startAssessmentIfUnlocked);
+  ac.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); startAssessmentIfUnlocked(); } });
+}
+
+function wireAssessment() {
+  document.getElementById("backToDashFromAss").addEventListener("click", () => { showView("view-dashboard"); renderDashboard(); });
+  document.getElementById("startAssBtn").addEventListener("click", () => {
+    document.getElementById("ass-intro").style.display = "none";
+    document.getElementById("ass-running").style.display = "block";
+    renderAssessment();
+  });
+}
+
+function renderAssessment() {
+  const container = document.getElementById("ass-running");
+  let html = '<h2>Part A: Multiple Choice (10 questions)</h2>';
+  MCQ_QUESTIONS.forEach((mcq, qi) => {
+    html += '<div class="kc-question" id="ass-mcq-' + qi + '">';
+    html += '<div class="kc-question__text">' + (qi+1) + '. ' + mcq.q + '</div>';
+    mcq.opts.forEach((opt, oi) => {
+      html += '<button class="mcq-option" data-qi="' + qi + '" data-oi="' + oi + '">' + String.fromCharCode(65 + oi) + ') ' + opt + '</button>';
+    });
+    html += '</div>';
+  });
+  html += '<h2>Part B: Short Answer (5 questions)</h2><p>Answer in your own words.</p>';
+  SA_QUESTIONS.forEach((sa, si) => {
+    html += '<div class="sa-field" id="ass-sa-' + si + '"><label>' + (11 + si) + '. ' + sa.q + '</label><textarea id="sa-answer-' + si + '" placeholder="Write your answer here..."></textarea><div class="sa-criteria" id="sa-criteria-' + si + '"><strong>Marking criteria:</strong> ' + sa.criteria + '</div></div>';
+  });
+  html += '<button class="btn btn--gold btn--full mt-5" id="submitAssBtn">Submit Assessment</button>';
+  container.innerHTML = html;
+  const mcqAnswers = {};
+  container.querySelectorAll(".mcq-option").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const qi = parseInt(btn.dataset.qi);
+      const oi = parseInt(btn.dataset.oi);
+      mcqAnswers[qi] = oi;
+      container.querySelectorAll('[data-qi="' + qi + '"]').forEach(b => b.classList.remove("mcq-option--selected"));
+      btn.classList.add("mcq-option--selected");
+    });
+  });
+  document.getElementById("submitAssBtn").addEventListener("click", () => {
+    if (Object.keys(mcqAnswers).length < MCQ_QUESTIONS.length) {
+      alert("Please answer all 10 multiple choice questions before submitting.");
+      return;
+    }
+    let mcqScore = 0;
+    MCQ_QUESTIONS.forEach((mcq, qi) => {
+      const selected = mcqAnswers[qi];
+      const isCorrect = checkMCQ(qi, selected);
+      container.querySelectorAll('[data-qi="' + qi + '"]').forEach(b => {
+        b.disabled = true;
+        const boi = parseInt(b.dataset.oi);
+        if (checkMCQ(qi, boi)) b.classList.add("mcq-option--correct");
+        if (boi === selected && !checkMCQ(qi, boi)) b.classList.add("mcq-option--incorrect");
+      });
+      if (isCorrect) mcqScore++;
+    });
+    SA_QUESTIONS.forEach((sa, si) => {
+      document.getElementById("sa-criteria-" + si).style.display = "block";
+    });
+    document.getElementById("submitAssBtn").style.display = "none";
+    const passed = mcqScore >= 8;
+    state.finalResult = { mcqScore: mcqScore, total: 10, passed: passed, date: new Date().toISOString() };
+    saveState(state);
+    const resultDiv = document.getElementById("ass-result");
+    resultDiv.style.display = "block";
+    let resultHtml = '<div class="result-box ' + (passed ? 'result-box--pass' : 'result-box--fail') + '">';
+    resultHtml += '<div class="result-score">' + mcqScore + ' / 10</div>';
+    resultHtml += '<p style="font-size:18px;font-weight:bold;margin-top:var(--space-3)">' + (passed ? 'You passed!' : 'Not yet') + '</p>';
+    if (passed) {
+      resultHtml += '<p>You scored ' + mcqScore + ' out of 10 on the multiple choice section. Review the short answer marking criteria above to self-assess your written answers.</p>';
+      resultHtml += '<button class="btn btn--gold btn--full mt-5" onclick="showCertificate()">View Your Certificate</button>';
+    } else {
+      resultHtml += '<p>You scored ' + mcqScore + ' out of 10. You need at least 8 out of 10 to pass. Review the content and try again.</p>';
+      resultHtml += '<button class="btn btn--secondary btn--full mt-5" onclick="showView(\'view-dashboard\');renderDashboard();">Back to Dashboard</button>';
+    }
+    resultHtml += '</div>';
+    resultDiv.innerHTML = resultHtml;
+    resultDiv.scrollIntoView({ behavior: "smooth" });
+  });
+}
+
+function showCertificate() {
+  if (!state.learner || !state.finalResult || !state.finalResult.passed) return;
+  const now = new Date();
+  const dateStr = now.toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" });
+  const yy = String(now.getFullYear()).slice(-2);
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+  const rand = String(Math.floor(10000 + Math.random() * 90000));
+  const certRef = "MKG-" + yy + mm + dd + "-" + rand;
+  document.getElementById("certName").textContent = state.learner.name;
+  document.getElementById("certDate").textContent = dateStr;
+  document.getElementById("certRef").textContent = certRef;
+  document.getElementById("certMessage").textContent = "Well done, " + state.learner.name.split(" ")[0] + ". You have completed the Inter-City and High-Volume Parcel Routes course and the full Courier Driver Training programme.";
+  showView("view-certificate");
+  document.getElementById("downloadCert").onclick = () => generateCertPDF(state.learner.name, dateStr, certRef);
+  document.getElementById("backToDashFromCert").addEventListener("click", () => { showView("view-dashboard"); renderDashboard(); });
+}
+
+function generateCertPDF(name, dateStr, certRef) {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
+  const w = doc.internal.pageSize.getWidth();
+  const h = doc.internal.pageSize.getHeight();
+  doc.setDrawColor(197, 151, 44);
+  doc.setLineWidth(3);
+  doc.rect(10, 10, w - 20, h - 20);
+  doc.setLineWidth(0.5);
+  doc.rect(14, 14, w - 28, h - 28);
+  doc.setFontSize(14);
+  doc.setTextColor(139, 148, 163);
+  doc.text("MK GLOBAL SA (Pty) Ltd", w / 2, 35, { align: "center" });
+  doc.setFontSize(28);
+  doc.setTextColor(27, 58, 92);
+  doc.text("CERTIFICATE OF TRAINING ATTENDED", w / 2, 55, { align: "center" });
+  doc.setDrawColor(197, 151, 44);
+  doc.setLineWidth(1);
+  doc.line(w / 2 - 60, 62, w / 2 + 60, 62);
+  doc.setFontSize(14);
+  doc.setTextColor(58, 66, 81);
+  doc.text("This certifies that", w / 2, 78, { align: "center" });
+  doc.setFontSize(24);
+  doc.setTextColor(27, 58, 92);
+  doc.text(name, w / 2, 92, { align: "center" });
+  doc.setFontSize(14);
+  doc.setTextColor(58, 66, 81);
+  doc.text("has completed the", w / 2, 106, { align: "center" });
+  doc.setFontSize(18);
+  doc.setTextColor(46, 117, 182);
+  doc.text("Inter-City and High-Volume Parcel Routes", w / 2, 118, { align: "center" });
+  doc.setFontSize(14);
+  doc.setTextColor(58, 66, 81);
+  doc.text("of the Courier Driver Training programme.", w / 2, 130, { align: "center" });
+  doc.setFontSize(11);
+  doc.setTextColor(139, 148, 163);
+  doc.text("Date: " + dateStr + "    |    Certificate Ref: " + certRef, w / 2, 150, { align: "center" });
+  doc.setFontSize(9);
+  doc.text("This certificate confirms attendance of a professional development programme.", w / 2, 165, { align: "center" });
+  doc.text("It is not a formal SAQA qualification and does not replace any licence, permit, or certificate required by law.", w / 2, 171, { align: "center" });
+  doc.setFontSize(10);
+  doc.setTextColor(27, 58, 92);
+  doc.text("MK Global SA (Pty) Ltd  |  info@mkglobal.co.za", w / 2, 185, { align: "center" });
+  doc.save("MKGlobal_InterCityHighVolume_Certificate.pdf");
+}
+
+function wireActionPlan() {
+  document.getElementById("backToDashFromAP").addEventListener("click", () => { showView("view-dashboard"); renderDashboard(); });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  wireAccessGate();
+  wireRegistration();
+  wireSessionView();
+  wireDashboardActions();
+  wireAssessment();
+  wireActionPlan();
+  route();
+});
+</script>
+</body>
+</html>
